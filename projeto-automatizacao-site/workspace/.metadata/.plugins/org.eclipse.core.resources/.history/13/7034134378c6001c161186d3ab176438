@@ -1,0 +1,19 @@
+package Dsl;
+
+
+import org.openqa.selenium.WebDriver;
+
+public class Dsl {
+
+	private WebDriver driver ;
+	
+	public Dsl(WebDriver driver) {
+		this.driver=driver;
+	}
+	
+	public boolean verifica_SeEstaNaPaginaDesejda(String link_pagina) {
+	  	return driver.getCurrentUrl().equals(link_pagina);
+	}
+	
+	
+}

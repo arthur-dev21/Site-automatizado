@@ -1,0 +1,33 @@
+package Dsl;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import config.LinkPaginas;
+
+public class Dsl {
+
+	private WebDriver driver ;
+	
+	public Dsl(WebDriver driver) {
+		this.driver=driver;
+	}
+	
+	public void entrarEmUmaPaginaEspecifica(LinkPaginas pagina) {
+		driver.get(pagina.d());
+	}
+	
+	public boolean verifica_SeEstaNaPaginaDesejda(String link_pagina) {
+	  	return driver.getCurrentUrl().equals(link_pagina);
+	}
+	
+	public WebElement buscarElemento_pelaClasse(String classe_nome) {
+		return driver.findElement(By.className(classe_nome));
+	}
+	
+   
+	
+	
+}

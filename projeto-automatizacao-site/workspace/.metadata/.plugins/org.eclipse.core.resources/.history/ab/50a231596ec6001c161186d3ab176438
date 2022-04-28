@@ -1,0 +1,12 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+
+public class TestPaginaInicial {
+    
+	private WebDriver driver;
+	
+	public void configuracao() {
+		driver = 
+	}
+}

@@ -1,0 +1,19 @@
+package Dsl;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+
+public class Dsl {
+
+	private WebDriver driver ;
+	
+	public Dsl(WebDriver driver) {
+		this.driver=driver;
+	}
+	
+	public boolean verifica_SeEstaNaPaginaDesejda() {
+	  	driver.getCurrentUrl().equals("http://automationpractice.com/index.php");
+	}
+	
+	
+}

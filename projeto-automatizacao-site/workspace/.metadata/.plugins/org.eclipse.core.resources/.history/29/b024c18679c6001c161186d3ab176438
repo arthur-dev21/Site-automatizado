@@ -1,0 +1,20 @@
+package config;
+
+public enum LinkPaginas {
+
+	PAGINA_INICIAL("http://automationpractice.com/index.php");
+	
+	private String descricao;
+	
+	LinkPaginas(String descricao) {
+		this.descricao=descricao;
+	}
+	
+	public String d() {
+		return descricao;
+	}
+	
+	
+	
+	
+}

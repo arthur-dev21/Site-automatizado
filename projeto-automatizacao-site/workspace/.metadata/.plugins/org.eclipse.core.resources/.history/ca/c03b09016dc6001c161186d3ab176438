@@ -1,0 +1,13 @@
+package config;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ConfigDriver {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C://ARTHUR\\ESTUDO-TI//T03-PROJETOS//TESTES//SELENIUM//projeto-automatizacao-site//drivers//chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("file:///"+System.getProperty("user.dir")+"/src/test/resources/My Store.html");
+	}
+}

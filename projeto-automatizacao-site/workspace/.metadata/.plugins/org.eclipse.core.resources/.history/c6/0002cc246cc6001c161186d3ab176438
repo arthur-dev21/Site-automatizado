@@ -1,0 +1,8 @@
+package config;
+
+public class ConfigDriver {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C://ARTHUR\\ESTUDO-TI//T03-PROJETOS//TESTES//SELENIUM//projeto-automatizacao-site//drivers//chromedriver.exe");
+	}
+}

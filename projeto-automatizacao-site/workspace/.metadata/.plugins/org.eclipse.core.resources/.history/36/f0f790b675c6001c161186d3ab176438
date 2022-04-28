@@ -1,0 +1,47 @@
+package test;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestPaginaAutenticacao {
+
+private WebDriver driver;
+
+    private final String PAGINA_AUTHENTICACAO = "http://automationpractice.com/index.php?controller=authentication&back=my-account"; 
+	
+	@Before
+	public void inicio() {
+		 System.setProperty("webdriver.chrome.driver","C:/ARTHUR/ESTUDO-TI/T03-PROJETOS/TESTES/SELENIUM/projeto-automatizacao-site/drivers/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.get(PAGINA_AUTHENTICACAO);
+	}
+	
+	@After
+	public void encerrar() {
+		//driver.quit();
+	}
+	
+	@Test
+	public void deveVerificar_SeEntrouNaPaginaIncial() {
+		Assert.assertEquals(PAGINA_AUTHENTICACAO, driver.getCurrentUrl().toString());
+		
+	}
+	
+	@Test
+	public void deveVerificar_SeSeguiuParaPaginaDeCadastro_AoEntrarComEmail_Valido() {
+		 driver.findElement(By.className("is_required validate account_input form-control")).sendKeys("socorro4551@uorak.com");
+		 driver.findElement(By.id("SubmitCreate")).click();
+		 
+		 Assert.assertFalse(driver.getPageSource().equals(PAGINA_AUTHENTICACAO));
+		
+	}
+	
+	
+	
+}

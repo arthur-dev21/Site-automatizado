@@ -1,0 +1,14 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+
+import config.ConfigDriver;
+
+public class TestPaginaInicial {
+    
+	private WebDriver driver;
+	
+	public void configuracao() {
+		driver = new ConfigDriver();
+	}
+}

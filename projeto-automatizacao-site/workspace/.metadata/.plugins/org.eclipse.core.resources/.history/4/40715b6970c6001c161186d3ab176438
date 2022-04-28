@@ -1,0 +1,17 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import config.ConfigDriver;
+
+public class TestPaginaInicial {
+    
+	private WebDriver driver;
+	
+	private void inicio() {
+		 System.setProperty("webdriver.chrome.driver","C:/ARTHUR/ESTUDO-TI/T03-PROJETOS/TESTES/SELENIUM/projeto-automatizacao-site/drivers/chromedriver.exe");
+			WebDriver driver = new ChromeDriver();
+			driver.get("http://automationpractice.com/index.php");
+	}
+}

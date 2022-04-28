@@ -1,0 +1,45 @@
+package test;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+public class TestPaginaInicial {
+    
+	private WebDriver driver;
+	
+	@Before
+	public void inicio() {
+		 System.setProperty("webdriver.chrome.driver","C:/ARTHUR/ESTUDO-TI/T03-PROJETOS/TESTES/SELENIUM/projeto-automatizacao-site/drivers/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.get("http://automationpractice.com/index.php");
+	}
+	
+	@After
+	public void encerrar() {
+		driver.quit();
+	}
+	
+	@Test
+	public void deveVerificar_SeEntrouNaPaginaIncial() {
+		Assert.assertEquals("http://automationpractice.com/index.php", driver.getCurrentUrl().toString());
+		
+	}
+	
+	@Test
+	public void deveVerificar_seEntrouNaPaginaAuthenticacao() {
+		WebElement botaoLogin = driver.findElement(By.className("login"));
+		botaoLogin.click();
+		
+	
+	}
+	
+	
+}

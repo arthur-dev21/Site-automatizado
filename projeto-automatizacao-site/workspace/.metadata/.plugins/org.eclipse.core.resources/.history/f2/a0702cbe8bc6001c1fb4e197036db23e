@@ -1,0 +1,22 @@
+package page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import Dsl.Dsl;
+
+public class PagePaginaAuthenticaçao {
+
+	
+	private Dsl dsl;
+
+	public PagePaginaAuthenticaçao(WebDriver driver) {
+		dsl = new Dsl(driver);
+	}
+	
+	public void inserirEmailNocadastro(String email) {
+		driver.findElement(By.id("email_create")).sendKeys("socorro4551@uorak.com");
+	}
+	
+	
+}
